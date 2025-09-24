@@ -209,7 +209,7 @@ position: relative;
     padding: 10px;
     border-style:none;
     transition: 0.3s;
-    background-image: url(/imgs/55003.png);
+    background-image: url('imgs/55003.png');
     background-size: 100%;
     background-color: #1c6ebb;
     
@@ -249,4 +249,5 @@ position: relative;
     left:100000px
 
 }
+
 
