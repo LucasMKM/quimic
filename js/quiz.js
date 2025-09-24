@@ -215,25 +215,3 @@ function proxima_pergunta (){
 
 }
 
-
-let card = document.querySelector('.card');
-let  scene = document.querySelector('.scene');
-
-scene.addEventListener('mousemove', (asd) => {
- let rect = scene.getBoundingClientRect();
-  let x = asd.clientX - rect.left;
-  let y = asd.clientY - rect.top;
-  
-  let centerX = rect.width / 2;
-  let centerY = rect.height / 2;
-  
- let rotateX = ((y - centerY) / centerY) * 10;
-  let rotateY = ((x - centerX) / centerX) * 10;
-
-  card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-});
-
-scene.addEventListener('mouseleave', () => {
-  card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-
-});
