@@ -229,13 +229,18 @@ position: relative;
 
 }
 
-.readpa{
-
-    display:flex;
-    padding:10px;
+.readpa {
+    display: flex;
     background-color: #9b4411;
-    margin:0;
-
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 #proxima{
@@ -248,3 +253,4 @@ position: relative;
     position:relative;
     left:100000px
 }
+
