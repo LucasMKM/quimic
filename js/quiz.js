@@ -55,7 +55,7 @@ else {
 
     resposta.textContent= 'A água oxigenada é composta por dois átomos de hidrogênio e dois átomos de oxigênio, daí a fórmula H₂O₂. H₂O é a água comum.'
 
-    proxima.style.left='1000px'
+    proxima.style.left='10000px'
 
 }
 
@@ -91,7 +91,7 @@ else {
 
     resposta.textContent= 'Justificativa: Em baixas concentrações (3-10%), o H₂O₂ é amplamente utilizado como antisséptico para limpar e desinfetar pequenos cortes e feridas, devido à sua ação oxidante que mata microrganismos.'
 
-    proxima.style.left='1000px'
+    proxima.style.left='10000px'
 
     }
 }
@@ -123,6 +123,8 @@ else {
     erro1.textContent='errou'
     
     erro1.style.color='red'
+
+    proxima.style.left='10000px'
 
     resposta.textContent= 'O H₂O₂ é um oxidante forte. Ele quebra as ligações químicas dos pigmentos (corantes) que compõem as manchas, tornando-as incolores, daí seu uso para clarear cabelos e branquear dentes e tecidos.'
 
@@ -186,7 +188,7 @@ function proxima_pergunta (){
         pergunta1.innerHTML ='a) Desinfetar ferimentos (antisséptico)';
         pergunta2.innerHTML='b) Limpar metais';
         pergunta3.innerHTML='c) Lustrar móveis';
-        proxima.style.left= '1000px'
+        proxima.style.left= '10000px'
       }
 
       if (or == 3){
@@ -195,7 +197,7 @@ function proxima_pergunta (){
         pergunta1.innerHTML ='a) Porque adiciona cor aos tecidos';
         pergunta2.innerHTML='b) Porque remove manchas através da redução';
         pergunta3.innerHTML='c) Porque oxida compostos coloridos, clareando-os';
-        proxima.style.left= '1000px'
+        proxima.style.left= '10000px'
 
       }
 
@@ -233,4 +235,5 @@ scene.addEventListener('mousemove', (asd) => {
 
 scene.addEventListener('mouseleave', () => {
   card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+
 });
