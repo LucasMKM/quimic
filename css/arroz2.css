@@ -252,5 +252,19 @@ position: relative;
     padding: 1px 20px
 }
 
+.readpaed{
+    display: flex;
+    background-color: #9b4411;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 
 
