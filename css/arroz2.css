@@ -1,9 +1,3 @@
-section {min-height: 100vh;
-animation-timeline: view();
-animation-range: cover 0% cover 30%;
-animation: appear ease-in-out;
-}
-
 .body{
 
     background-color: #2e435f;
@@ -253,4 +247,5 @@ position: relative;
     position:relative;
     left:100000px
 }
+
 
