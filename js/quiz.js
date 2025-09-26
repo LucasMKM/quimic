@@ -12,6 +12,7 @@ let erro = document.getElementById('mensagemErro');
 let erro1= document.getElementById('mersagep');
 let resposta = document.querySelector('.reposta')
 let puro = document.querySelector('#puro_suco')
+let item2 = document.querySelector('.item2')
 
 if(!perguntas1){
 
@@ -37,7 +38,7 @@ if(perguntas1.id == 'pergunta2'){
 
     document.querySelector('.reposta').textContent = '';
     
-    proxima.style.left='0px'
+    proxima.style.bottom='0px'
 
     setTimeout(proxima_pergunta, 1000)
 
@@ -55,7 +56,7 @@ else {
 
     resposta.textContent= 'A água oxigenada é composta por dois átomos de hidrogênio e dois átomos de oxigênio, daí a fórmula H₂O₂. H₂O é a água comum.'
 
-    proxima.style.left='10000px'
+    proxima.style.bottom='1000px'
 
 }
 
@@ -72,10 +73,13 @@ if(or == 2){
     erro1.style.display='none'
 
     erro.style.color='black'
-   
-    proxima.style.left='0px'
+
+    document.querySelector('.reposta').textContent = '';
+    
+    proxima.style.bottom='0px'
 
     setTimeout(proxima_pergunta, 1000)
+
 
 }
 
@@ -91,7 +95,7 @@ else {
 
     resposta.textContent= 'Justificativa: Em baixas concentrações (3-10%), o H₂O₂ é amplamente utilizado como antisséptico para limpar e desinfetar pequenos cortes e feridas, devido à sua ação oxidante que mata microrganismos.'
 
-    proxima.style.left='10000px'
+    proxima.style.bottom='1000px'
 
     }
 }
@@ -108,7 +112,7 @@ if(or == 3){
 
     erro.style.color='black'
 
-    proxima.style.left='0px'
+    proxima.style.bottom='0px'
    
     setTimeout(proxima_pergunta, 1000)
 
@@ -123,8 +127,6 @@ else {
     erro1.textContent='errou'
     
     erro1.style.color='red'
-
-    proxima.style.left='10000px'
 
     resposta.textContent= 'O H₂O₂ é um oxidante forte. Ele quebra as ligações químicas dos pigmentos (corantes) que compõem as manchas, tornando-as incolores, daí seu uso para clarear cabelos e branquear dentes e tecidos.'
 
@@ -188,7 +190,7 @@ function proxima_pergunta (){
         pergunta1.innerHTML ='a) Desinfetar ferimentos (antisséptico)';
         pergunta2.innerHTML='b) Limpar metais';
         pergunta3.innerHTML='c) Lustrar móveis';
-        proxima.style.left= '10000px'
+        proxima.style.bottom= '1000px'
       }
 
       if (or == 3){
@@ -197,14 +199,14 @@ function proxima_pergunta (){
         pergunta1.innerHTML ='a) Porque adiciona cor aos tecidos';
         pergunta2.innerHTML='b) Porque remove manchas através da redução';
         pergunta3.innerHTML='c) Porque oxida compostos coloridos, clareando-os';
-        proxima.style.left= '10000px'
+        proxima.style.bottom= '1000px'
 
       }
 
       if(or ==4){
 
         puro.innerHTML='🎉 PARABÉNS PELA VITÓRIA NO QUIZ! 🎉 Você arrasou! Mostrou que tem conhecimento na ponta da língua! 💡Cada acerto é uma prova do seu potencial. Que orgulho! Que essa vitória seja o primeiro degrau de muitas conquistas por vir. Você merece comemorar – mesmo que seja com um sorriso satisfeito aí daí! Campeão/Campeã de hoje, estrela de sempre! ⭐Parabéns! 👏'
-
+        item2.style.bottom='10000px'
       }
 
         };
@@ -215,3 +217,24 @@ function proxima_pergunta (){
 
 }
 
+
+let card = document.querySelector('.card');
+let  scene = document.querySelector('.scene');
+
+scene.addEventListener('mousemove', (asd) => {
+ let rect = scene.getBoundingClientRect();
+  let x = asd.clientX - rect.left;
+  let y = asd.clientY - rect.top;
+  
+  let centerX = rect.width / 2;
+  let centerY = rect.height / 2;
+  
+ let rotateX = ((y - centerY) / centerY) * 10;
+  let rotateY = ((x - centerX) / centerX) * 10;
+
+  card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+scene.addEventListener('mouseleave', () => {
+  card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
