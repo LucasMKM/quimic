@@ -233,7 +233,6 @@ position: relative;
     align-items: center;
     width: 100%;
     right:20px;
-    border-radius: 10px;
     padding: 1px 20px
 }
 
@@ -263,4 +262,5 @@ position: relative;
     z-index: 1000;
     padding:10px;
 }
+
 
