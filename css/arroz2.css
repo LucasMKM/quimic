@@ -84,7 +84,6 @@ transform: translatey(-10px);
     border-radius: 30px;
     align-items: center;
     overflow-wrap: break-word;
-    word-break: break-word;
     padding:20px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     transition: 1s;
@@ -264,6 +263,7 @@ position: relative;
     z-index: 1000;
     padding:10px;
 }
+
 
 
 
