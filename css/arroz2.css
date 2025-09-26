@@ -155,7 +155,6 @@ position: relative;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     max-width: 100%;}
-};
 
 .link_quiz{
     
@@ -263,9 +262,3 @@ position: relative;
     z-index: 1000;
     padding:10px;
 }
-
-
-
-
-
-
